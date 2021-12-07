@@ -15,7 +15,7 @@ fun getWindowList(measurements: List<Int>): List<Int> {
 
 fun main(args: Array<String>) {
   var data = mutableListOf<Int>()
-  File("src/data").forEachLine { data.add(it.toInt()) }
+  File("src/day1data").forEachLine { data.add(it.toInt()) }
   println(countIncrease(data))
   println(countIncrease(getWindowList(data)))
 }
