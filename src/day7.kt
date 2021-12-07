@@ -19,13 +19,7 @@ fun minFuelWithDynamicRate(crabLocations: List<Int>): Long {
 }
 
 fun main(args: Array<String>) {
-  val file = File("src/day7data")
-  file.useLines { lines ->
-    val positions = lines
-      .first()
-      .split(',')
-      .map { it.toInt() }
-    println(minFuelWithConstantRate(positions))
-    println(minFuelWithDynamicRate(positions))
-  }
+  val crabLocations = File("src/day7data").readLines().first().split(",").map { it.toInt() }
+  println(minFuelWithConstantRate(crabLocations))
+  println(minFuelWithDynamicRate(crabLocations))
 }
